@@ -118,12 +118,11 @@ class Parser:
         self.tok = self.tokens[self.index] if self.index < len(self.tokens) else None
     
     def parse(self):
-        pass
+        res, error = self.expr()
+        return res, error
     
     def expr(self):
-        left, error = self.term()
-        if error: return None, error
-
+        pass
 
     def term(self):
         pass
